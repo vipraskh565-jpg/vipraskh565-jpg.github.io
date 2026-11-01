@@ -3,160 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bright English | انگلیسی کلاس هشتم</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<title>کار و فناوری پایه هشتم</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FBF6EE;--surface:#fff;--ink:#1B2E29;--muted:#5E6F69;--green:#1F4D42;--on-green:#F6F1E7;--accent:#FF7A3D;--lilac:#E6DDFB;--mint:#D7F0E3;--sun:#FFE8A8;--line:#E6DFD0;
+:root{--bg:#f6f8fc;--card:#fff;--text:#16202e;--muted:#5b6b80;--p:#2563eb;--p2:#06b6d4;--line:#e2e8f0;--ok:#16a34a;--bad:#dc2626;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101A17;--surface:#18271F;--ink:#EEF3EF;--muted:#A5B5AE;--green:#2E6B5C;--on-green:#F6F1E7;--lilac:#2B2548;--mint:#1D3A2F;--sun:#4A3E17;--line:#2A3B34;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#101A17;--surface:#18271F;--ink:#EEF3EF;--muted:#A5B5AE;--green:#2E6B5C;--on-green:#F6F1E7;--lilac:#2B2548;--mint:#1D3A2F;--sun:#4A3E17;--line:#2A3B34;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1420;--card:#152033;--text:#e8eef8;--muted:#9fb0c6;--p:#60a5fa;--p2:#22d3ee;--line:#243349;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1420;--card:#152033;--text:#e8eef8;--muted:#9fb0c6;--p:#60a5fa;--p2:#22d3ee;--line:#243349;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.8;overflow-x:hidden}
-.wrap{max-width:1080px;margin:auto;padding:0 20px}
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.logo{font-weight:800;font-size:1.25rem;display:flex;gap:8px;align-items:center}
-.logo i{width:34px;height:34px;border-radius:50%;background:var(--accent);display:inline-block}
-nav a{color:var(--muted);text-decoration:none;margin-inline-start:18px;font-size:.95rem}
-.btn{display:inline-block;background:var(--accent);color:#1B1B1B;font-weight:800;padding:12px 26px;border-radius:999px;text-decoration:none;border:0;font-family:inherit;font-size:1rem;cursor:pointer}
-.btn.dark{background:var(--green);color:var(--on-green)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:36px 0 56px}
-.tag{display:inline-block;background:var(--lilac);padding:4px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
-h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.35;margin:14px 0;font-weight:800}
-h1 em{font-style:normal;color:var(--accent)}
-.lead{color:var(--muted);font-size:1.05rem;max-width:34em}
-.art{position:relative;height:340px}
-.art div{position:absolute;border-radius:28px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:2rem}
-.a1{inset:0 18% 18% 0;background:var(--green);color:var(--on-green);border-radius:160px 160px 28px 28px!important;flex-direction:column;gap:4px}
-.a2{width:46%;height:42%;right:0;bottom:0;background:var(--sun)}
-.a3{width:30%;height:26%;left:0;bottom:8%;background:var(--mint);font-size:1.4rem!important}
-.a4{width:64px;height:64px;left:4%;top:4%;background:var(--accent);border-radius:50%!important;font-size:1.2rem!important}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px;text-align:center}
-.stat b{display:block;font-size:1.9rem;color:var(--accent)}
-.stat span{color:var(--muted);font-size:.9rem}
-section{padding:64px 0}
-h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin:0 0 10px;font-weight:800}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-.about .box{background:var(--lilac);border-radius:32px;padding:32px;min-height:260px;display:grid;place-items:center;text-align:center}
-.about .box p{margin:0;font-size:1.3rem;font-weight:800}
-.about p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:24px}
-.card .ic{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:10px}
-.card h3{margin:0 0 4px;font-size:1.1rem}
-.card p{margin:0;color:var(--muted);font-size:.92rem}
-.quiz{background:var(--green);color:var(--on-green);border-radius:36px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.quiz h2{color:var(--on-green)}
-.q{direction:ltr;text-align:left;font-size:1.15rem;font-weight:600;margin-bottom:12px}
-.opts{display:flex;gap:10px;flex-wrap:wrap;direction:ltr}
-.opts button{font-family:inherit;font-size:1rem;padding:10px 20px;border-radius:999px;border:2px solid rgba(255,255,255,.35);background:transparent;color:var(--on-green);cursor:pointer}
-.opts button.ok{background:#5CD39A;color:#0E2A20;border-color:#5CD39A}
-.opts button.no{background:#F58B7B;color:#2A0F0B;border-color:#F58B7B}
-#fb{margin-top:12px;min-height:1.8em}
-.cta{text-align:center;background:var(--sun);border-radius:36px;padding:48px 20px}
-footer{padding:28px 0 36px;color:var(--muted);text-align:center;font-size:.9rem}
-@media (max-width:760px){.hero,.about,.quiz{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.art{height:260px}nav a.l{display:none}section{padding:44px 0}.quiz{padding:28px}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:8px;overflow-x:auto}
+header b{white-space:nowrap}
+nav{display:flex;gap:14px;font-size:14px}
+nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--p)}
+button{font:inherit;cursor:pointer}
+.theme{border:1px solid var(--line);background:none;color:var(--text);border-radius:10px;padding:2px 10px}
+.hero{padding:56px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#1d4ed8,#06b6d4)}
+.hero h1{margin:0 0 8px;font-size:clamp(26px,6vw,44px);font-weight:800}
+.hero p{margin:0 auto 20px;max-width:560px;opacity:.95}
+.btn{display:inline-block;background:#fff;color:#1d4ed8;padding:8px 22px;border-radius:999px;text-decoration:none;font-weight:600}
+section{max-width:960px;margin:0 auto;padding:36px 16px}
+h2{font-size:24px;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.card .n{width:34px;height:34px;border-radius:50%;background:var(--p);color:#fff;display:grid;place-items:center;font-weight:600;margin-bottom:6px}
+.card h3{margin:0 0 4px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.steps{display:flex;flex-wrap:wrap;gap:10px;counter-reset:s;padding:0;list-style:none}
+.steps li{flex:1 1 140px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;font-size:14px}
+.steps li::before{counter-increment:s;content:counter(s);display:block;color:var(--p);font-weight:800;font-size:22px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px}
+summary{cursor:pointer;font-weight:600}
+.q{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.opts{display:grid;gap:8px;margin:12px 0}
+.opts button{text-align:right;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.opts button.ok{background:var(--ok);color:#fff}.opts button.bad{background:var(--bad);color:#fff}
+.next{background:var(--p);color:#fff;border:0;border-radius:10px;padding:6px 18px}
+footer{text-align:center;color:var(--muted);padding:28px 16px;border-top:1px solid var(--line);font-size:14px}
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav><div class="logo"><i></i>Bright English</div><div><a class="l" href="#about">درباره ما</a><a class="l" href="#skills">مهارت‌ها</a><a class="l" href="#quiz">آزمون کوتاه</a><a class="btn dark" href="#join" style="margin-inline-start:18px;color:var(--on-green)">شروع کن</a></div></nav>
-
-<header class="hero">
-<div>
-<span class="tag">ویژه‌ی پایه‌ی هشتم</span>
-<h1>انگلیسی را <em>ساده</em> یاد بگیر، نه فقط حفظ کن</h1>
-<p class="lead">درس‌ها، لغت‌ها و گرامر پایه‌ی هشتم با توضیح فارسی، مثال‌های انگلیسی و تمرین‌های کوتاه، تا قدم‌به‌قدم مطمئن‌تر شوی.</p>
-<p style="margin-top:22px"><a class="btn" href="#quiz">آزمون ۳۰ ثانیه‌ای</a></p>
-</div>
-<div class="art" aria-hidden="true">
-<div class="a1"><span dir="ltr">Hello!</span><small style="font-size:1rem;font-weight:400">Grade 8</small></div>
-<div class="a2" dir="ltr">A · B · C</div>
-<div class="a3" dir="ltr">Read</div>
-<div class="a4">★</div>
-</div>
+<header>
+<b>⚙️ کار و فناوری ۸</b>
+<nav><a href="#about">معرفی</a><a href="#modules">پودمان‌ها</a><a href="#process">فرایند طراحی</a><a href="#safety">ایمنی</a><a href="#quiz">آزمون</a></nav>
+<button class="theme" id="t" aria-label="تغییر تم">🌓</button>
 </header>
 
-<div class="stats">
-<div class="stat"><b>۱۰۰+</b><span>لغت کلیدی</span></div>
-<div class="stat"><b>۴</b><span>مهارت اصلی</span></div>
-<div class="stat"><b>۱۵</b><span>دقیقه تمرین در روز</span></div>
-<div class="stat"><b>۱</b><span>هدف: اعتمادبه‌نفس</span></div>
+<div class="hero">
+<h1>کار و فناوری پایه هشتم</h1>
+<p>یاد بگیر، طراحی کن، بساز! خلاصه‌ی پودمان‌ها، مراحل حل مسئله، نکات ایمنی و یک آزمون کوتاه در یک سایت.</p>
+<a class="btn" href="#modules">شروع یادگیری</a>
 </div>
 
-<section id="about" class="about">
-<div class="box"><p dir="ltr">“Small steps every day<br>make big English.”</p></div>
-<div>
-<span class="tag">درباره ما</span>
-<h2>ماموریت ما: یادگیری بدون استرس</h2>
-<p>ما این سایت را ساختیم چون یادگیری زبان باید شبیه بازی باشد، نه امتحان. هر درس را به بخش‌های کوچک تقسیم کرده‌ایم تا در چند دقیقه بخوانی، تمرین کنی و پیشرفتت را حس کنی.</p>
-<p>مطالب با برنامه‌ی درسی پایه‌ی هشتم هماهنگ است و برای دانش‌آموزان، خانواده‌ها و معلم‌ها طراحی شده.</p>
-</div>
-</section>
-
-<section id="skills" style="padding-top:8px">
-<span class="tag">چه یاد می‌گیری؟</span>
-<h2>چهار مهارت، یک مسیر روشن</h2>
-<div class="cards">
-<div class="card"><div class="ic" style="background:var(--sun)">📚</div><h3>Vocabulary | لغت</h3><p>کارت‌های تصویری و جمله‌های ساده برای ماندگاری بیشتر.</p></div>
-<div class="card"><div class="ic" style="background:var(--mint)">✏️</div><h3>Grammar | گرامر</h3><p>توضیح فارسی کوتاه، مثال انگلیسی و تمرین فوری.</p></div>
-<div class="card"><div class="ic" style="background:var(--lilac)">📖</div><h3>Reading | درک مطلب</h3><p>متن‌های کوتاه و جذاب با سؤال‌های قدم‌به‌قدم.</p></div>
-<div class="card"><div class="ic" style="background:var(--lilac)">🎧</div><h3>Listening | شنیداری</h3><p>تلفظ درست را بشنو و تکرار کن.</p></div>
-<div class="card"><div class="ic" style="background:var(--sun)">💬</div><h3>Speaking | مکالمه</h3><p>جمله‌های کاربردی برای کلاس و زندگی روزمره.</p></div>
-<div class="card"><div class="ic" style="background:var(--mint)">📝</div><h3>Writing | نوشتن</h3><p>از یک جمله تا یک پاراگراف کوتاه.</p></div>
+<section id="about">
+<h2>درباره‌ی درس</h2>
+<p class="sub">درس کار و فناوری به ما یاد می‌دهد مسئله‌های زندگی روزمره را شناسایی کنیم، برایشان راه‌حل خلاق پیدا کنیم و آن را با مهارت و رعایت ایمنی بسازیم.</p>
+<div class="grid">
+<div class="card"><h3>💡 خلاقیت</h3><p>ایده‌پردازی و نگاه تازه به مسئله‌ها</p></div>
+<div class="card"><h3>🛠️ مهارت</h3><p>کار با ابزار و ساخت محصول</p></div>
+<div class="card"><h3>🤝 کار گروهی</h3><p>تقسیم وظایف و همکاری در پروژه</p></div>
+<div class="card"><h3>🌱 مسئولیت</h3><p>توجه به محیط زیست و صرفه‌جویی</p></div>
 </div>
 </section>
 
-<section id="quiz" style="padding-top:8px">
-<div class="quiz">
-<div>
+<section id="modules">
+<h2>پودمان‌ها</h2>
+<p class="sub">روی هر پودمان بزن تا خلاصه‌اش را ببینی. (عنوان‌ها را با کتاب خودت مطابقت بده.)</p>
+<div class="grid">
+<div class="card"><div class="n">۱</div><h3>طراحی و ساخت</h3><p>از ایده تا نقشه و ساخت نمونه‌ی اولیه</p></div>
+<div class="card"><div class="n">۲</div><h3>برق و الکترونیک</h3><p>مدار ساده، اجزای مدار و کاربردها</p></div>
+<div class="card"><div class="n">۳</div><h3>فناوری اطلاعات</h3><p>کار با رایانه، برنامه‌نویسی و اینترنت</p></div>
+<div class="card"><div class="n">۴</div><h3>کشاورزی و محیط زیست</h3><p>مراقبت از گیاه و مصرف بهینه‌ی منابع</p></div>
+</div>
+<br>
+<details><summary>چرا نقشه و طراحی مهم است؟</summary><p>چون قبل از ساخت، خطاها را روی کاغذ پیدا می‌کنیم و در هزینه و زمان صرفه‌جویی می‌شود.</p></details>
+<details><summary>مدار الکتریکی ساده از چه چیزهایی ساخته می‌شود؟</summary><p>منبع انرژی (باتری)، سیم رابط، کلید و مصرف‌کننده (مثل لامپ).</p></details>
+<details><summary>مصرف بهینه یعنی چه؟</summary><p>یعنی از آب، انرژی و مواد اولیه به اندازه و بدون هدر دادن استفاده کنیم.</p></details>
+</section>
+
+<section id="process">
+<h2>مراحل حل مسئله</h2>
+<p class="sub">هر پروژه‌ی فناورانه این مسیر را طی می‌کند.</p>
+<ol class="steps">
+<li>شناخت مسئله</li><li>جمع‌آوری اطلاعات</li><li>ایده‌پردازی</li><li>انتخاب بهترین راه‌حل</li><li>ساخت نمونه</li><li>آزمایش و بهبود</li>
+</ol>
+</section>
+
+<section id="safety">
+<h2>نکات ایمنی کارگاه</h2>
+<div class="grid">
+<div class="card"><h3>🥽 تجهیزات</h3><p>عینک، دستکش و لباس کار بپوش.</p></div>
+<div class="card"><h3>🔌 برق</h3><p>با دست خیس به وسایل برقی دست نزن.</p></div>
+<div class="card"><h3>🧹 نظم</h3><p>میز کار را تمیز و ابزارها را سر جایشان نگه دار.</p></div>
+<div class="card"><h3>👩‍🏫 راهنما</h3><p>در صورت شک، از معلم بپرس.</p></div>
+</div>
+</section>
+
+<section id="quiz">
 <h2>آزمون کوتاه</h2>
-<p style="opacity:.85;margin:0">گزینه‌ی درست را انتخاب کن و ببین چقدر آماده‌ای.</p>
-</div>
-<div>
-<div class="q" id="q"></div>
-<div class="opts" id="o"></div>
-<div id="fb"></div>
-</div>
-</div>
+<div class="q" id="qb"></div>
 </section>
 
-<section id="join">
-<div class="cta">
-<h2>آماده‌ای شروع کنیم؟</h2>
-<p style="color:var(--ink);opacity:.8">هر روز ۱۵ دقیقه کافی است تا فرق را ببینی.</p>
-<a class="btn dark" href="#about" style="color:var(--on-green)">شروع یادگیری</a>
-</div>
-</section>
-<footer>© Bright English · ساخته‌شده برای دانش‌آموزان پایه‌ی هشتم</footer>
-</div>
+<footer>ساخته‌شده توسط: نام تو · پایه هشتم · درس کار و فناوری</footer>
+
 <script>
-var Q=[
-{q:"She ___ to school every day.",o:["go","goes","going"],a:1},
-{q:"There ___ two books on the desk.",o:["is","are","am"],a:1},
-{q:"Yesterday, I ___ a movie.",o:["watch","watched","watching"],a:1}
+const root=document.documentElement;
+try{const s=localStorage.getItem('th');if(s)root.dataset.theme=s}catch(e){}
+document.getElementById('t').onclick=()=>{
+ const d=getComputedStyle(root).colorScheme==='dark';
+ root.dataset.theme=d?'light':'dark';
+ try{localStorage.setItem('th',root.dataset.theme)}catch(e){}
+};
+const Q=[
+ {q:'اولین مرحله‌ی حل مسئله چیست؟',o:['ساخت محصول','شناخت مسئله','فروش'],a:1},
+ {q:'کدام یک جزء مدار الکتریکی ساده نیست؟',o:['باتری','کلید','ابر'],a:2},
+ {q:'قبل از کار با ابزار باید…',o:['نکات ایمنی را رعایت کنیم','عجله کنیم','کار را رها کنیم'],a:0},
+ {q:'هدف از آزمایش نمونه‌ی اولیه چیست؟',o:['پیدا کردن اشکال و بهبود','تزئین','هیچ‌کدام'],a:0}
 ];
-var i=0,done=false;
+let i=0,sc=0;const b=document.getElementById('qb');
 function show(){
-  var c=Q[i];done=false;
-  document.getElementById("q").textContent=c.q;
-  document.getElementById("fb").textContent="";
-  var o=document.getElementById("o");o.innerHTML="";
-  c.o.forEach(function(t,k){
-    var b=document.createElement("button");b.textContent=t;
-    b.onclick=function(){
-      if(done)return;
-      if(k===c.a){b.className="ok";done=true;
-        document.getElementById("fb").textContent=(i<Q.length-1)?"آفرین! ✔ سؤال بعدی…":"آفرین! همه‌ی سؤال‌ها را تمام کردی 🎉";
-        setTimeout(function(){i=(i+1)%Q.length;show();},1200);
-      }else{b.className="no";document.getElementById("fb").textContent="دوباره امتحان کن";}
-    };
-    o.appendChild(b);
-  });
+ if(i>=Q.length){b.innerHTML='<h3>نمره‌ی تو: '+sc+' از '+Q.length+' 🎉</h3><button class="next" onclick="i=0;sc=0;show()">دوباره</button>';return}
+ const c=Q[i];
+ b.innerHTML='<b>سؤال '+(i+1)+': '+c.q+'</b><div class="opts">'+c.o.map((t,k)=>'<button data-k="'+k+'">'+t+'</button>').join('')+'</div>';
+ b.querySelectorAll('.opts button').forEach(x=>x.onclick=()=>{
+  const k=+x.dataset.k;
+  b.querySelectorAll('.opts button').forEach(y=>y.disabled=true);
+  x.classList.add(k===c.a?'ok':'bad');
+  b.querySelectorAll('.opts button')[c.a].classList.add('ok');
+  if(k===c.a)sc++;
+  const n=document.createElement('button');n.className='next';n.textContent='بعدی';n.onclick=()=>{i++;show()};b.appendChild(n);
+ });
 }
 show();
 </script>
 </body>
-  </html>
+</html>
