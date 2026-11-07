@@ -3,141 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>کار و فناوری پایه هشتم</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<title>تفکر و سبک زندگی هشتم</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f8fc;--card:#fff;--text:#16202e;--muted:#5b6b80;--p:#2563eb;--p2:#06b6d4;--line:#e2e8f0;--ok:#16a34a;--bad:#dc2626;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1420;--card:#152033;--text:#e8eef8;--muted:#9fb0c6;--p:#60a5fa;--p2:#22d3ee;--line:#243349;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0d1420;--card:#152033;--text:#e8eef8;--muted:#9fb0c6;--p:#60a5fa;--p2:#22d3ee;--line:#243349;color-scheme:dark}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+:root{--bg:#fff8ee;--card:#fff;--text:#2b2340;--mut:#6b6485;--bd:#f0e3cf;--ok:#16a34a;--bad:#e11d48;--ink:#2b2340;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171424;--card:#221e35;--text:#f3effc;--mut:#b4acd0;--bd:#352f50;--ink:#171424}}
+:root[data-theme="dark"]{--bg:#171424;--card:#221e35;--text:#f3effc;--mut:#b4acd0;--bd:#352f50;--ink:#171424}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9}
-header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:8px;overflow-x:auto}
-header b{white-space:nowrap}
-nav{display:flex;gap:14px;font-size:14px}
-nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
-nav a:hover{color:var(--p)}
-button{font:inherit;cursor:pointer}
-.theme{border:1px solid var(--line);background:none;color:var(--text);border-radius:10px;padding:2px 10px}
-.hero{padding:56px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#1d4ed8,#06b6d4)}
-.hero h1{margin:0 0 8px;font-size:clamp(26px,6vw,44px);font-weight:800}
-.hero p{margin:0 auto 20px;max-width:560px;opacity:.95}
-.btn{display:inline-block;background:#fff;color:#1d4ed8;padding:8px 22px;border-radius:999px;text-decoration:none;font-weight:600}
-section{max-width:960px;margin:0 auto;padding:36px 16px}
-h2{font-size:24px;margin:0 0 6px}
-.sub{color:var(--muted);margin:0 0 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
-.card .n{width:34px;height:34px;border-radius:50%;background:var(--p);color:#fff;display:grid;place-items:center;font-weight:600;margin-bottom:6px}
-.card h3{margin:0 0 4px;font-size:17px}
-.card p{margin:0;color:var(--muted);font-size:14px}
-.steps{display:flex;flex-wrap:wrap;gap:10px;counter-reset:s;padding:0;list-style:none}
-.steps li{flex:1 1 140px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;font-size:14px}
-.steps li::before{counter-increment:s;content:counter(s);display:block;color:var(--p);font-weight:800;font-size:22px}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px}
-summary{cursor:pointer;font-weight:600}
-.q{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
-.opts{display:grid;gap:8px;margin:12px 0}
-.opts button{text-align:right;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
-.opts button.ok{background:var(--ok);color:#fff}.opts button.bad{background:var(--bad);color:#fff}
-.next{background:var(--p);color:#fff;border:0;border-radius:10px;padding:6px 18px}
-footer{text-align:center;color:var(--muted);padding:28px 16px;border-top:1px solid var(--line);font-size:14px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:2;font-size:1.2rem}
+.wrap{max-width:920px;margin:0 auto;padding:22px}
+header{text-align:center;padding:22px 14px;border-radius:24px;color:#fff;background:linear-gradient(135deg,#7c3aed,#ec4899 60%,#f59e0b);box-shadow:0 8px 24px #7c3aed33}
+header h1{margin:0;font-size:2.3rem;font-weight:800;line-height:1.5}header{padding:34px 18px!important}header p{font-size:1.2rem}#total{font-size:1.3rem}.bar{height:18px}.extra{margin-top:12px;border-radius:14px;padding:12px 14px;border-inline-start:6px solid #f59e0b;background:var(--bg)}.extra.tip{border-color:#10b981}.sum li{margin:6px 0}details{background:var(--card);border:2px solid var(--bd);border-radius:18px;margin:12px 0;padding:6px 18px}summary{font-weight:800;font-size:1.3rem;cursor:pointer;padding:10px 0}details ul,details ol{padding-inline-start:22px}details li{margin:8px 0}.guide{margin-top:18px}.guide>h2{font-size:1.6rem;margin:20px 0 4px}.kw span{display:inline-block;background:#7c3aed22;border-radius:99px;padding:2px 14px;margin:4px;font-weight:700}.extra.exam{border-color:#ef4444}.opt{font-size:1.1rem;padding:12px 14px}.q p{font-size:1.15rem}
+header p{margin:4px 0 12px;opacity:.95}
+.bar{height:12px;border-radius:99px;background:#ffffff55;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#fff;border-radius:99px;transition:width .5s}
+#total{font-weight:700;margin-top:8px}
+.lesson{background:var(--card);border:2px solid var(--bd);border-radius:20px;margin:14px 0;overflow:hidden}
+.lesson>button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:12px;padding:20px 18px;cursor:pointer;font-weight:800;font-size:1.4rem}
+.lesson>button:focus-visible{outline:3px solid #7c3aed}
+.ico{width:68px;height:68px;border-radius:20px;display:grid;place-items:center;font-size:2.2rem;color:#fff;flex:none}
+.t{flex:1}.t small{display:block;color:var(--mut);font-weight:400;font-size:.8rem}
+.chev{transition:transform .3s;color:var(--mut)}
+.open .chev{transform:rotate(-90deg)}
+.body{display:none;padding:0 16px 16px}
+.open .body{display:block}
+.sum{border-radius:14px;padding:12px 14px;background:var(--bg)}
+.sum ul{margin:6px 0 0;padding-inline-start:20px}
+h3{margin:16px 0 6px;font-size:1rem}
+.q{margin:10px 0;padding:12px;border:2px dashed var(--bd);border-radius:14px}
+.q p{margin:0 0 8px;font-weight:700}
+.opt{display:block;width:100%;text-align:right;font:inherit;color:inherit;background:var(--card);border:2px solid var(--bd);border-radius:12px;padding:8px 12px;margin:6px 0;cursor:pointer}
+.opt:disabled{cursor:default}
+.opt.ok{border-color:var(--ok);background:#16a34a22}
+.opt.bad{border-color:var(--bad);background:#e11d4822}
+.res{margin-top:10px;padding:12px;border-radius:14px;text-align:center;font-weight:700;background:var(--bg);display:none}
+.btn{font:inherit;font-weight:700;color:#fff;border:0;border-radius:99px;padding:8px 18px;cursor:pointer;background:#7c3aed}
+.note{font-size:.8rem;color:var(--mut);text-align:center;margin:18px 0}
 </style>
 </head>
 <body>
+<div class="wrap">
 <header>
-<b>⚙️ کار و فناوری ۸</b>
-<nav><a href="#about">معرفی</a><a href="#modules">پودمان‌ها</a><a href="#process">فرایند طراحی</a><a href="#safety">ایمنی</a><a href="#quiz">آزمون</a></nav>
-<button class="theme" id="t" aria-label="تغییر تم">🌓</button>
+<h1>🧠 تفکر و سبک زندگی ⭐ پایه هشتم</h1>
+<p>روی اسم هر درس بزن، خلاصه‌اش باز می‌شه! بعدش آزمون بده و ستاره بگیر 🌟</p>
+<div class="bar"><i id="fill"></i></div>
+<div id="total">امتیاز کل: ۰ از ۰ 🎯</div>
 </header>
-
-<div class="hero">
-<h1>کار و فناوری پایه هشتم</h1>
-<p>یاد بگیر، طراحی کن، بساز! خلاصه‌ی پودمان‌ها، مراحل حل مسئله، نکات ایمنی و یک آزمون کوتاه در یک سایت.</p>
-<a class="btn" href="#modules">شروع یادگیری</a>
+<section class="guide"><h2>🎓 راهنمای کامل آماده‌شدن برای امتحان</h2>
+<details open><summary>📅 چطور بخونیم؟ (قدم‌به‌قدم)</summary><ol><li><b>اول خلاصه رو بخون:</b> کل درس رو یک‌بار سریع بخون تا تصویر کلی توی ذهنت بیاد.</li><li><b>با کتاب مقایسه کن:</b> زیر نکات مهم کتاب خط بکش و فعالیت‌ها و «بیندیشیم»ها رو دوباره بخون.</li><li><b>با زبان خودت توضیح بده:</b> درس رو برای یه دوست یا حتی آینه تعریف کن. هرجا گیر کردی یعنی هنوز بلد نیستی.</li><li><b>آزمون بده:</b> همین‌جا آزمون هر درس رو بزن و اشتباهاتت رو یادداشت کن.</li><li><b>مرور کن:</b> فردای اون روز و یه هفته بعد دوباره مرور کن؛ این کار مطالب رو تو حافظه بلندمدت نگه می‌داره.</li></ol></details>
+<details><summary>⏳ برنامه ۳ روز مونده به امتحان</summary><ul><li><b>روز اول:</b> خلاصه ۴ درس اول + آزمون‌هاشون.</li><li><b>روز دوم:</b> خلاصه ۴ درس بعدی + آزمون‌ها + مرور اشتباهات روز اول.</li><li><b>روز سوم:</b> فقط مرور کلمات کلیدی، نکات امتحانی و سؤال‌هایی که غلط زدی. چیز جدید شروع نکن!</li></ul></details>
+<details><summary>🧠 ترفندهای حفظ کردن</summary><ul><li>🔗 <b>داستان‌سازی:</b> مفاهیم رو با یه ماجرای بامزه به هم وصل کن.</li><li>🎨 <b>رنگ‌بندی:</b> هر مفهوم مهم رو با یه رنگ مشخص کن.</li><li>🗂️ <b>فلش‌کارت:</b> سؤال یه طرف کارت، جواب طرف دیگه.</li><li>🔤 <b>سرواژه:</b> از حرف اول چند کلمه یه کلمه بسازی تا یادت بمونه.</li><li>🚶 <b>بلند بخون و راه برو:</b> حرکت به حافظه کمک می‌کنه.</li></ul></details>
+<details><summary>🌙 شب امتحان و صبح امتحان</summary><ul><li>😴 زود بخواب؛ خواب کافی از یه ساعت مطالعه بیشتر مهمه.</li><li>🍳 صبح صبحانه بخور و آب بنوش.</li><li>🎒 وسایلت (خودکار، مداد، پاک‌کن) رو از شب قبل آماده کن.</li><li>🌬️ اگه استرس داشتی، چند نفس عمیق بکش (همون مهارت مدیریت هیجان!).</li></ul></details>
+<details><summary>📝 توی جلسه امتحان چیکار کنیم؟</summary><ul><li>👀 اول همه سؤال‌ها رو بخون و از آسون‌ترها شروع کن.</li><li>⏱️ زمان رو بین سؤال‌ها تقسیم کن.</li><li>✍️ جواب‌ها رو کامل و با خط خوانا بنویس؛ توی تفکر و سبک زندگی توضیح و مثال نمره داره.</li><li>🔁 ۵ دقیقه آخر برگه رو مرور کن.</li><li>🧩 اگه سؤال تشریحی بود، اول تعریف، بعد توضیح، آخر یه مثال بنویس.</li></ul></details>
+<h2>📚 درس‌ها</h2></section>
+<main id="list"></main>
+<p class="note">📌 عنوان‌ها و خلاصه‌ها کلی‌اند؛ برای نمره کامل، با کتاب خودت مقایسه‌شون کن.</p>
 </div>
-
-<section id="about">
-<h2>درباره‌ی درس</h2>
-<p class="sub">درس کار و فناوری به ما یاد می‌دهد مسئله‌های زندگی روزمره را شناسایی کنیم، برایشان راه‌حل خلاق پیدا کنیم و آن را با مهارت و رعایت ایمنی بسازیم.</p>
-<div class="grid">
-<div class="card"><h3>💡 خلاقیت</h3><p>ایده‌پردازی و نگاه تازه به مسئله‌ها</p></div>
-<div class="card"><h3>🛠️ مهارت</h3><p>کار با ابزار و ساخت محصول</p></div>
-<div class="card"><h3>🤝 کار گروهی</h3><p>تقسیم وظایف و همکاری در پروژه</p></div>
-<div class="card"><h3>🌱 مسئولیت</h3><p>توجه به محیط زیست و صرفه‌جویی</p></div>
-</div>
-</section>
-
-<section id="modules">
-<h2>پودمان‌ها</h2>
-<p class="sub">روی هر پودمان بزن تا خلاصه‌اش را ببینی. (عنوان‌ها را با کتاب خودت مطابقت بده.)</p>
-<div class="grid">
-<div class="card"><div class="n">۱</div><h3>طراحی و ساخت</h3><p>از ایده تا نقشه و ساخت نمونه‌ی اولیه</p></div>
-<div class="card"><div class="n">۲</div><h3>برق و الکترونیک</h3><p>مدار ساده، اجزای مدار و کاربردها</p></div>
-<div class="card"><div class="n">۳</div><h3>فناوری اطلاعات</h3><p>کار با رایانه، برنامه‌نویسی و اینترنت</p></div>
-<div class="card"><div class="n">۴</div><h3>کشاورزی و محیط زیست</h3><p>مراقبت از گیاه و مصرف بهینه‌ی منابع</p></div>
-</div>
-<br>
-<details><summary>چرا نقشه و طراحی مهم است؟</summary><p>چون قبل از ساخت، خطاها را روی کاغذ پیدا می‌کنیم و در هزینه و زمان صرفه‌جویی می‌شود.</p></details>
-<details><summary>مدار الکتریکی ساده از چه چیزهایی ساخته می‌شود؟</summary><p>منبع انرژی (باتری)، سیم رابط، کلید و مصرف‌کننده (مثل لامپ).</p></details>
-<details><summary>مصرف بهینه یعنی چه؟</summary><p>یعنی از آب، انرژی و مواد اولیه به اندازه و بدون هدر دادن استفاده کنیم.</p></details>
-</section>
-
-<section id="process">
-<h2>مراحل حل مسئله</h2>
-<p class="sub">هر پروژه‌ی فناورانه این مسیر را طی می‌کند.</p>
-<ol class="steps">
-<li>شناخت مسئله</li><li>جمع‌آوری اطلاعات</li><li>ایده‌پردازی</li><li>انتخاب بهترین راه‌حل</li><li>ساخت نمونه</li><li>آزمایش و بهبود</li>
-</ol>
-</section>
-
-<section id="safety">
-<h2>نکات ایمنی کارگاه</h2>
-<div class="grid">
-<div class="card"><h3>🥽 تجهیزات</h3><p>عینک، دستکش و لباس کار بپوش.</p></div>
-<div class="card"><h3>🔌 برق</h3><p>با دست خیس به وسایل برقی دست نزن.</p></div>
-<div class="card"><h3>🧹 نظم</h3><p>میز کار را تمیز و ابزارها را سر جایشان نگه دار.</p></div>
-<div class="card"><h3>👩‍🏫 راهنما</h3><p>در صورت شک، از معلم بپرس.</p></div>
-</div>
-</section>
-
-<section id="quiz">
-<h2>آزمون کوتاه</h2>
-<div class="q" id="qb"></div>
-</section>
-
-<footer>ساخته‌شده توسط: نام تو · پایه هشتم · درس کار و فناوری</footer>
-
 <script>
-const root=document.documentElement;
-try{const s=localStorage.getItem('th');if(s)root.dataset.theme=s}catch(e){}
-document.getElementById('t').onclick=()=>{
- const d=getComputedStyle(root).colorScheme==='dark';
- root.dataset.theme=d?'light':'dark';
- try{localStorage.setItem('th',root.dataset.theme)}catch(e){}
-};
-const Q=[
- {q:'اولین مرحله‌ی حل مسئله چیست؟',o:['ساخت محصول','شناخت مسئله','فروش'],a:1},
- {q:'کدام یک جزء مدار الکتریکی ساده نیست؟',o:['باتری','کلید','ابر'],a:2},
- {q:'قبل از کار با ابزار باید…',o:['نکات ایمنی را رعایت کنیم','عجله کنیم','کار را رها کنیم'],a:0},
- {q:'هدف از آزمایش نمونه‌ی اولیه چیست؟',o:['پیدا کردن اشکال و بهبود','تزئین','هیچ‌کدام'],a:0}
+const L=[
+{e:"🪞",c:"#7c3aed",t:"خودشناسی",s:["شناخت نقاط قوت و ضعف، علاقه‌ها و استعدادها اولین قدم رشده.","هر کس ویژگی‌های منحصربه‌فردی داره و مقایسه با دیگران همیشه درست نیست.","با خودشناسی بهتر تصمیم می‌گیریم و هدف مناسب انتخاب می‌کنیم."],q:[["خودشناسی یعنی چی؟",["شناخت ویژگی‌ها و توانایی‌های خود","شناخت دیگران","حفظ کردن درس"],0],["خودشناسی چه کمکی می‌کنه؟",["بدتر شدن تصمیم‌ها","انتخاب بهتر هدف و مسیر","فرار از مسئولیت"],1]]},
+{e:"💗",c:"#ec4899",t:"مدیریت هیجان‌ها",s:["هیجان‌ها مثل خشم، ترس و شادی بخشی طبیعی از زندگی‌ان.","مهم اینه که هیجان رو بشناسیم و درست ابراز کنیم، نه سرکوبش کنیم.","نفس عمیق، صبر کردن و صحبت با فرد مورد اعتماد کمک می‌کنه."],q:[["هنگام عصبانیت کدوم کار بهتره؟",["داد زدن","نفس عمیق و آروم شدن","شکستن وسایل"],1],["هیجان‌ها چطورین؟",["همه بد هستن","بخش طبیعی زندگی‌ان","اصلاً وجود ندارن"],1]]},
+{e:"⚖️",c:"#f59e0b",t:"تصمیم‌گیری درست",s:["قبل از تصمیم، مسئله رو بشناس و راه‌حل‌ها رو فهرست کن.","نتیجه هر راه‌حل رو بسنج و بعد انتخاب کن.","با بزرگ‌ترها مشورت کردن به تصمیم بهتر کمک می‌کنه."],q:[["اولین قدم تصمیم‌گیری چیه؟",["انتخاب سریع","شناخت مسئله","نادیده گرفتنش"],1],["مشورت چه فایده‌ای داره؟",["تصمیم رو بهتر می‌کنه","وقت تلف می‌کنه","هیچی"],0]]},
+{e:"⏰",c:"#10b981",t:"مدیریت زمان",s:["زمان سرمایه‌ای تجدیدناپذیره؛ برنامه‌ریزی ازش بهتر استفاده می‌کنه.","کارها رو به مهم و فوری دسته‌بندی کن.","استراحت، ورزش و خواب هم جزو برنامه‌ی خوبه."],q:[["کدوم کار به مدیریت زمان کمک می‌کنه؟",["برنامه‌ریزی روزانه","امروز-فردا کردن","بی‌برنامگی"],0],["برنامه خوب شامل چیه؟",["فقط درس","درس، استراحت و ورزش","فقط بازی"],1]]},
+{e:"🗣️",c:"#3b82f6",t:"مهارت‌های ارتباطی",s:["گوش دادن فعال یعنی با دقت و بدون قطع کردن حرف دیگران گوش بدیم.","احترام، لحن مناسب و زبان بدن در ارتباط موثر نقش دارن.","با «پیام من» می‌شه نارضایتی رو محترمانه گفت."],q:[["گوش دادن فعال یعنی؟",["وسط حرف پریدن","توجه کامل به گوینده","فقط سر تکون دادن"],1],["کدوم به ارتباط خوب کمک می‌کنه؟",["لحن محترمانه","تحقیر","بی‌اعتنایی"],0]]},
+{e:"🔍",c:"#ef4444",t:"تفکر نقادانه",s:["تفکر نقادانه یعنی سنجیدن اطلاعات قبل از پذیرفتنشون.","از خودمون بپرسیم: منبعش چیه؟ دلیلش چیه؟","هر خبری که می‌شنویم الزاماً درست نیست."],q:[["قبل از باور یه خبر چیکار کنیم؟",["فوراً پخشش کنیم","منبع و دلیلش رو بررسی کنیم","نادیده‌اش بگیریم"],1],["تفکر نقادانه یعنی؟",["مخالفت با همه","سنجیدن و ارزیابی اطلاعات","حفظ کردن"],1]]},
+{e:"🥗",c:"#84cc16",t:"سبک زندگی سالم",s:["تغذیه مناسب، خواب کافی و تحرک بدنی پایه‌های سلامتن.","استفاده زیاد از موبایل و فضای مجازی سلامت جسم و روان رو تهدید می‌کنه.","عادت‌های خوب رو کم‌کم و با پشتکار می‌سازیم."],q:[["کدوم جزو سبک زندگی سالمه؟",["بی‌خوابی","خواب و تحرک کافی","فقط فست‌فود"],1],["عادت خوب چطور ساخته می‌شه؟",["یک‌شبه","کم‌کم و با تکرار","هیچ‌وقت"],1]]},
+{e:"🤝",c:"#06b6d4",t:"مسئولیت‌پذیری",s:["مسئولیت‌پذیری یعنی پذیرفتن نتیجه کارهامون.","انجام وظایف در خانه، مدرسه و جامعه نشانه‌ی رشده.","اشتباه که کردیم، جبران می‌کنیم و درس می‌گیریم."],q:[["مسئولیت‌پذیر کیه؟",["کسی که نتیجه کارش رو می‌پذیره","کسی که بقیه رو مقصر می‌دونه","کسی که فرار می‌کنه"],0],["بعد از اشتباه چیکار کنیم؟",["انکار","جبران و درس گرفتن","پنهان‌کاری"],1]]}
 ];
-let i=0,sc=0;const b=document.getElementById('qb');
-function show(){
- if(i>=Q.length){b.innerHTML='<h3>نمره‌ی تو: '+sc+' از '+Q.length+' 🎉</h3><button class="next" onclick="i=0;sc=0;show()">دوباره</button>';return}
- const c=Q[i];
- b.innerHTML='<b>سؤال '+(i+1)+': '+c.q+'</b><div class="opts">'+c.o.map((t,k)=>'<button data-k="'+k+'">'+t+'</button>').join('')+'</div>';
- b.querySelectorAll('.opts button').forEach(x=>x.onclick=()=>{
-  const k=+x.dataset.k;
-  b.querySelectorAll('.opts button').forEach(y=>y.disabled=true);
-  x.classList.add(k===c.a?'ok':'bad');
-  b.querySelectorAll('.opts button')[c.a].classList.add('ok');
-  if(k===c.a)sc++;
-  const n=document.createElement('button');n.className='next';n.textContent='بعدی';n.onclick=()=>{i++;show()};b.appendChild(n);
- });
-}
-show();
+const EX=[
+["مثلاً کسی که دقیق و منظمه، می‌تونه توی کارهای گروهی مسئول برنامه‌ریزی بشه.","هر شب ۳ کار خوب که انجام دادی و ۱ کاری که می‌تونی بهتر کنی رو یادداشت کن."],
+["اگه دوستت حرف بدی زد، قبل از جواب دادن تا ۱۰ بشمار تا آروم‌تر تصمیم بگیری.","اسم احساست رو بگو: «من ناراحتم» یا «من نگرانم». همین کار نصف فشار رو کم می‌کنه."],
+["برای انتخاب رشته یا فعالیت فوق‌برنامه، مزایا و معایب هر گزینه رو توی دو ستون بنویس.","تصمیم‌های مهم رو تحت تأثیر هیجان لحظه‌ای نگیر؛ یه شب صبر کن."],
+["با یه جدول هفتگی، زمان درس، ورزش و تفریح رو از هم جدا کن تا همه‌چی جا بشه.","سخت‌ترین درس رو در ساعتی که تمرکزت بیشتره بخون."],
+["به‌جای «تو همیشه دیر می‌کنی» بگو «وقتی دیر می‌رسی من نگران می‌شم».","موقع حرف زدن دیگران، موبایل رو کنار بذار و چشمی تماس بگیر."],
+["قبل از فوروارد کردن یه پیام توی گروه، ببین کی گفته و مدرکش چیه.","سه سؤال طلایی: چه کسی؟ چرا؟ مدرکش چیه؟"],
+["به‌جای نوشابه، آب یا دوغ بخور و هر روز حداقل نیم ساعت راه برو یا بازی کن.","زمان مشخصی برای موبایل بذار و قبل از خواب، اون رو دور از خودت قرار بده."],
+["اگه ظرف شکستی، به‌جای انکار بگو «من بودم» و کمک کن جمعش کنن.","هر هفته یه کار کوچک رو کاملاً مسئولانه و بدون یادآوری انجام بده."]
+];
+const KW=[["خودشناسی","نقاط قوت","استعداد","علاقه"],["هیجان","خشم","ابراز","آرام‌سازی"],["تصمیم‌گیری","راه‌حل","مشورت","پیامد"],["برنامه‌ریزی","اولویت","فوری","مهم"],["گوش دادن فعال","پیام من","احترام","زبان بدن"],["تفکر نقادانه","منبع","دلیل","ارزیابی"],["تغذیه","خواب","تحرک","عادت"],["مسئولیت","وظیفه","جبران","پیامد"]];
+const EXAM=[["تعریف خودشناسی و دو فایده‌اش رو بنویس.","یک نقطه قوت و یک نقطه قابل بهبود از خودت مثال بزن."],["سه راه مدیریت خشم رو نام ببر.","فرق ابراز درست و سرکوب هیجان چیه؟"],["مراحل تصمیم‌گیری رو به ترتیب بنویس.","یه تصمیم از زندگی خودت رو با این مراحل تحلیل کن."],["تفاوت کار «مهم» و «فوری» رو با مثال بگو.","دو فایده برنامه‌ریزی رو توضیح بده."],["ویژگی‌های گوش دادن فعال رو بنویس.","یه جمله با «پیام من» بساز."],["سه سؤال برای بررسی یه خبر بنویس.","چرا هر خبری رو نباید باور کنیم؟"],["سه عامل سبک زندگی سالم رو نام ببر.","یه عادت بد جایگزین کن با عادت خوب."],["مسئولیت‌پذیری رو تعریف کن.","بعد از اشتباه چه کارهایی باید بکنیم؟"]];
+let sc=L.map(()=>null);
+const $=s=>document.querySelector(s);
+const list=$("#list");
+function upd(){const g=sc.reduce((a,b)=>a+(b?b[0]:0),0),m=L.length*2,d=sc.filter(Boolean).length;
+$("#fill").style.width=(g/m*100)+"%";
+$("#total").textContent="امتیاز کل: "+g+" از "+m+" "+(g==m?"🏆":d?"🎯":"🎯");}
+L.forEach((l,i)=>{
+const d=document.createElement("section");d.className="lesson";
+d.innerHTML=`<button aria-expanded="false"><span class="ico" style="background:${l.c}">${l.e}</span><span class="t">درس ${i+1}: ${l.t}<small>بزن تا خلاصه و آزمون باز شه</small></span><span class="chev">◀</span></button>
+<div class="body"><div class="sum"><b>📖 خلاصه درس</b><ul>${l.s.map(x=>"<li>"+x+"</li>").join("")}</ul></div><div class="extra">💡 <b>مثال:</b> ${EX[i][0]}</div><div class="extra tip">🌱 <b>نکته طلایی:</b> ${EX[i][1]}</div><div class="extra kw">🔑 <b>کلمات کلیدی:</b><br>${KW[i].map(k=>"<span>"+k+"</span>").join("")}</div><div class="extra exam">🎯 <b>سؤال‌های محتمل امتحان:</b><ul>${EXAM[i].map(x=>"<li>"+x+"</li>").join("")}</ul></div><div class="extra tip">📖 <b>روش خوندن این درس:</b> اول خلاصه، بعد کلمات کلیدی، بعد سؤال‌های امتحان رو بدون نگاه کردن جواب بده، آخر آزمون پایین رو بزن.</div>
+<h3>📝 آزمون کوچیک</h3><div class="qs"></div><div class="res"></div></div>`;
+const qs=d.querySelector(".qs"),res=d.querySelector(".res");
+let ans=[],got=0;
+function render(){ans=[];got=0;qs.innerHTML="";res.style.display="none";
+l.q.forEach((q,qi)=>{const b=document.createElement("div");b.className="q";
+b.innerHTML="<p>"+(qi+1)+") "+q[0]+"</p>";
+q[1].forEach((o,oi)=>{const x=document.createElement("button");x.className="opt";x.textContent=o;
+x.onclick=()=>{b.querySelectorAll(".opt").forEach((y,k)=>{y.disabled=true;if(k==q[2])y.classList.add("ok")});
+if(oi==q[2])got++;else x.classList.add("bad");
+ans.push(1);
+if(ans.length==l.q.length){sc[i]=[got];upd();
+res.style.display="block";
+res.innerHTML=(got==2?"🎉 عالی! ":got==1?"👍 خوبه! ":"💪 دوباره تلاش کن! ")+"نمره: "+got+" از 2 "+"⭐".repeat(got)+"<br><button class='btn'>🔄 دوباره</button>";
+res.querySelector(".btn").onclick=()=>{sc[i]=null;upd();render()}}};
+b.appendChild(x)});qs.appendChild(b)})}
+render();
+d.querySelector("button").onclick=e=>{const o=d.classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o)};
+list.appendChild(d)});
+upd();
 </script>
 </body>
 </html>
