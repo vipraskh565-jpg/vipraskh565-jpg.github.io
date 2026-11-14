@@ -3,160 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bright English | انگلیسی کلاس هشتم</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<title>دستیار هوشمند پارسی هشتم</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FBF6EE;--surface:#fff;--ink:#1B2E29;--muted:#5E6F69;--green:#1F4D42;--on-green:#F6F1E7;--accent:#FF7A3D;--lilac:#E6DDFB;--mint:#D7F0E3;--sun:#FFE8A8;--line:#E6DFD0;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101A17;--surface:#18271F;--ink:#EEF3EF;--muted:#A5B5AE;--green:#2E6B5C;--on-green:#F6F1E7;--lilac:#2B2548;--mint:#1D3A2F;--sun:#4A3E17;--line:#2A3B34;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#101A17;--surface:#18271F;--ink:#EEF3EF;--muted:#A5B5AE;--green:#2E6B5C;--on-green:#F6F1E7;--lilac:#2B2548;--mint:#1D3A2F;--sun:#4A3E17;--line:#2A3B34;color-scheme:dark}
+:root{--bg:#0c0b14;--surface:#16151f;--surface2:#1e1c2b;--text:#f3f2fa;--muted:#9a98b0;--line:#2a2840;--brand:#8b5cf6;--brand2:#22d3ee;--user:#2b2450;--glow:rgba(139,92,246,.28);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f5fc;--surface:#fff;--surface2:#efedfb;--text:#1b1a2b;--muted:#6b6985;--line:#dedbf0;--user:#e6defc;--glow:rgba(139,92,246,.18);color-scheme:light}}
+:root[data-theme="light"]{--bg:#f6f5fc;--surface:#fff;--surface2:#efedfb;--text:#1b1a2b;--muted:#6b6985;--line:#dedbf0;--user:#e6defc;--glow:rgba(139,92,246,.18);color-scheme:light}
+:root[data-theme="dark"]{--bg:#0c0b14;--surface:#16151f;--surface2:#1e1c2b;--text:#f3f2fa;--muted:#9a98b0;--line:#2a2840;--user:#2b2450;--glow:rgba(139,92,246,.28);color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.8;overflow-x:hidden}
-.wrap{max-width:1080px;margin:auto;padding:0 20px}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;line-height:1.9;min-height:100vh;background-image:radial-gradient(ellipse 60% 40% at 50% -5%,var(--glow),transparent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 32px}
 nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.logo{font-weight:800;font-size:1.25rem;display:flex;gap:8px;align-items:center}
-.logo i{width:34px;height:34px;border-radius:50%;background:var(--accent);display:inline-block}
-nav a{color:var(--muted);text-decoration:none;margin-inline-start:18px;font-size:.95rem}
-.btn{display:inline-block;background:var(--accent);color:#1B1B1B;font-weight:800;padding:12px 26px;border-radius:999px;text-decoration:none;border:0;font-family:inherit;font-size:1rem;cursor:pointer}
-.btn.dark{background:var(--green);color:var(--on-green)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:36px 0 56px}
-.tag{display:inline-block;background:var(--lilac);padding:4px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
-h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.35;margin:14px 0;font-weight:800}
-h1 em{font-style:normal;color:var(--accent)}
-.lead{color:var(--muted);font-size:1.05rem;max-width:34em}
-.art{position:relative;height:340px}
-.art div{position:absolute;border-radius:28px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:2rem}
-.a1{inset:0 18% 18% 0;background:var(--green);color:var(--on-green);border-radius:160px 160px 28px 28px!important;flex-direction:column;gap:4px}
-.a2{width:46%;height:42%;right:0;bottom:0;background:var(--sun)}
-.a3{width:30%;height:26%;left:0;bottom:8%;background:var(--mint);font-size:1.4rem!important}
-.a4{width:64px;height:64px;left:4%;top:4%;background:var(--accent);border-radius:50%!important;font-size:1.2rem!important}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px;text-align:center}
-.stat b{display:block;font-size:1.9rem;color:var(--accent)}
-.stat span{color:var(--muted);font-size:.9rem}
-section{padding:64px 0}
-h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin:0 0 10px;font-weight:800}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-.about .box{background:var(--lilac);border-radius:32px;padding:32px;min-height:260px;display:grid;place-items:center;text-align:center}
-.about .box p{margin:0;font-size:1.3rem;font-weight:800}
-.about p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:24px}
-.card .ic{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:10px}
-.card h3{margin:0 0 4px;font-size:1.1rem}
-.card p{margin:0;color:var(--muted);font-size:.92rem}
-.quiz{background:var(--green);color:var(--on-green);border-radius:36px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.quiz h2{color:var(--on-green)}
-.q{direction:ltr;text-align:left;font-size:1.15rem;font-weight:600;margin-bottom:12px}
-.opts{display:flex;gap:10px;flex-wrap:wrap;direction:ltr}
-.opts button{font-family:inherit;font-size:1rem;padding:10px 20px;border-radius:999px;border:2px solid rgba(255,255,255,.35);background:transparent;color:var(--on-green);cursor:pointer}
-.opts button.ok{background:#5CD39A;color:#0E2A20;border-color:#5CD39A}
-.opts button.no{background:#F58B7B;color:#2A0F0B;border-color:#F58B7B}
-#fb{margin-top:12px;min-height:1.8em}
-.cta{text-align:center;background:var(--sun);border-radius:36px;padding:48px 20px}
-footer{padding:28px 0 36px;color:var(--muted);text-align:center;font-size:.9rem}
-@media (max-width:760px){.hero,.about,.quiz{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.art{height:260px}nav a.l{display:none}section{padding:44px 0}.quiz{padding:28px}}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800}
+.logo i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;font-style:normal;color:#fff}
+.badge{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:4px 12px;border-radius:99px;background:var(--surface)}
+.hero{text-align:center;padding:24px 0 22px}
+.hero h1{font-size:clamp(26px,6vw,44px);margin:0 0 10px;line-height:1.5;font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0 auto;max-width:520px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 60px -20px var(--glow);overflow:hidden}
+.bar{display:flex;align-items:center;gap:8px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--surface2);font-size:13px;color:var(--muted)}
+.dot{width:10px;height:10px;border-radius:50%;background:#34d399}
+#msgs{height:min(52vh,460px);overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:14px}
+.m{max-width:88%;padding:10px 16px;border-radius:16px;white-space:pre-wrap;word-wrap:break-word;font-size:15px}
+.m.bot{background:var(--surface2);border:1px solid var(--line);align-self:flex-start;border-top-right-radius:4px}
+.m.me{background:var(--user);align-self:flex-end;border-top-left-radius:4px}
+.m b{color:var(--brand2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 14px}
+.chip{font:inherit;font-size:13px;color:var(--text);background:transparent;border:1px solid var(--line);padding:5px 14px;border-radius:99px;cursor:pointer}
+.chip:hover{border-color:var(--brand);background:var(--surface2)}
+.in{display:flex;gap:10px;padding:14px;border-top:1px solid var(--line)}
+textarea{flex:1;resize:none;font:inherit;font-size:15px;color:var(--text);background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;height:48px;outline:none}
+textarea:focus{border-color:var(--brand)}
+#send{font:inherit;font-weight:700;color:#fff;border:0;border-radius:14px;padding:0 22px;cursor:pointer;background:linear-gradient(135deg,var(--brand),#6d4bd8)}
+#send:disabled{opacity:.5;cursor:default}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.feat div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:14px;color:var(--muted)}
+.feat b{display:block;color:var(--text);margin-bottom:2px}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><div class="logo"><i></i>Bright English</div><div><a class="l" href="#about">درباره ما</a><a class="l" href="#skills">مهارت‌ها</a><a class="l" href="#quiz">آزمون کوتاه</a><a class="btn dark" href="#join" style="margin-inline-start:18px;color:var(--on-green)">شروع کن</a></div></nav>
-
-<header class="hero">
-<div>
-<span class="tag">ویژه‌ی پایه‌ی هشتم</span>
-<h1>انگلیسی را <em>ساده</em> یاد بگیر، نه فقط حفظ کن</h1>
-<p class="lead">درس‌ها، لغت‌ها و گرامر پایه‌ی هشتم با توضیح فارسی، مثال‌های انگلیسی و تمرین‌های کوتاه، تا قدم‌به‌قدم مطمئن‌تر شوی.</p>
-<p style="margin-top:22px"><a class="btn" href="#quiz">آزمون ۳۰ ثانیه‌ای</a></p>
-</div>
-<div class="art" aria-hidden="true">
-<div class="a1"><span dir="ltr">Hello!</span><small style="font-size:1rem;font-weight:400">Grade 8</small></div>
-<div class="a2" dir="ltr">A · B · C</div>
-<div class="a3" dir="ltr">Read</div>
-<div class="a4">★</div>
-</div>
-</header>
-
-<div class="stats">
-<div class="stat"><b>۱۰۰+</b><span>لغت کلیدی</span></div>
-<div class="stat"><b>۴</b><span>مهارت اصلی</span></div>
-<div class="stat"><b>۱۵</b><span>دقیقه تمرین در روز</span></div>
-<div class="stat"><b>۱</b><span>هدف: اعتمادبه‌نفس</span></div>
-</div>
-
-<section id="about" class="about">
-<div class="box"><p dir="ltr">“Small steps every day<br>make big English.”</p></div>
-<div>
-<span class="tag">درباره ما</span>
-<h2>ماموریت ما: یادگیری بدون استرس</h2>
-<p>ما این سایت را ساختیم چون یادگیری زبان باید شبیه بازی باشد، نه امتحان. هر درس را به بخش‌های کوچک تقسیم کرده‌ایم تا در چند دقیقه بخوانی، تمرین کنی و پیشرفتت را حس کنی.</p>
-<p>مطالب با برنامه‌ی درسی پایه‌ی هشتم هماهنگ است و برای دانش‌آموزان، خانواده‌ها و معلم‌ها طراحی شده.</p>
-</div>
+<nav><div class="logo"><i>ف</i>یار فارسی</div><span class="badge">پایه هشتم</span></nav>
+<section class="hero">
+<h1>هر سؤالی از <span>پارسی هشتم</span> داری؟ بپرس!</h1>
+<p>دستور زبان، آرایه‌های ادبی، معنی واژه‌ها، شعرها و درس‌های کتاب، همه‌چیز را ساده و قدم‌به‌قدم توضیح می‌دهم.</p>
 </section>
-
-<section id="skills" style="padding-top:8px">
-<span class="tag">چه یاد می‌گیری؟</span>
-<h2>چهار مهارت، یک مسیر روشن</h2>
-<div class="cards">
-<div class="card"><div class="ic" style="background:var(--sun)">📚</div><h3>Vocabulary | لغت</h3><p>کارت‌های تصویری و جمله‌های ساده برای ماندگاری بیشتر.</p></div>
-<div class="card"><div class="ic" style="background:var(--mint)">✏️</div><h3>Grammar | گرامر</h3><p>توضیح فارسی کوتاه، مثال انگلیسی و تمرین فوری.</p></div>
-<div class="card"><div class="ic" style="background:var(--lilac)">📖</div><h3>Reading | درک مطلب</h3><p>متن‌های کوتاه و جذاب با سؤال‌های قدم‌به‌قدم.</p></div>
-<div class="card"><div class="ic" style="background:var(--lilac)">🎧</div><h3>Listening | شنیداری</h3><p>تلفظ درست را بشنو و تکرار کن.</p></div>
-<div class="card"><div class="ic" style="background:var(--sun)">💬</div><h3>Speaking | مکالمه</h3><p>جمله‌های کاربردی برای کلاس و زندگی روزمره.</p></div>
-<div class="card"><div class="ic" style="background:var(--mint)">📝</div><h3>Writing | نوشتن</h3><p>از یک جمله تا یک پاراگراف کوتاه.</p></div>
+<div class="card">
+<div class="bar"><span class="dot"></span>دستیار هوشمند پارسی هشتم</div>
+<div id="msgs"><div class="m bot">درود! 👋 من یار پارسی هشتم هستم. هر پرسشی درباره‌ی درس‌ها، دستور زبان، آرایه‌های ادبی یا معنی واژه‌ها داری بپرس.</div></div>
+<div class="chips" id="chips"></div>
+<div class="in"><textarea id="q" placeholder="سؤالت را اینجا بنویس…" rows="1"></textarea><button id="send">ارسال</button></div>
 </div>
-</section>
-
-<section id="quiz" style="padding-top:8px">
-<div class="quiz">
-<div>
-<h2>آزمون کوتاه</h2>
-<p style="opacity:.85;margin:0">گزینه‌ی درست را انتخاب کن و ببین چقدر آماده‌ای.</p>
+<div class="feat">
+<div><b>📖 درس‌به‌درس</b>مطابق کتاب فارسی هشتم</div>
+<div><b>✍️ دستور و نگارش</b>با مثال و نکته‌ی امتحانی</div>
+<div><b>🎯 تمرین و آزمون</b>از من تست و سؤال بخواه</div>
 </div>
-<div>
-<div class="q" id="q"></div>
-<div class="opts" id="o"></div>
-<div id="fb"></div>
-</div>
-</div>
-</section>
-
-<section id="join">
-<div class="cta">
-<h2>آماده‌ای شروع کنیم؟</h2>
-<p style="color:var(--ink);opacity:.8">هر روز ۱۵ دقیقه کافی است تا فرق را ببینی.</p>
-<a class="btn dark" href="#about" style="color:var(--on-green)">شروع یادگیری</a>
-</div>
-</section>
-<footer>© Bright English · ساخته‌شده برای دانش‌آموزان پایه‌ی هشتم</footer>
 </div>
 <script>
-var Q=[
-{q:"She ___ to school every day.",o:["go","goes","going"],a:1},
-{q:"There ___ two books on the desk.",o:["is","are","am"],a:1},
-{q:"Yesterday, I ___ a movie.",o:["watch","watched","watching"],a:1}
-];
-var i=0,done=false;
-function show(){
-  var c=Q[i];done=false;
-  document.getElementById("q").textContent=c.q;
-  document.getElementById("fb").textContent="";
-  var o=document.getElementById("o");o.innerHTML="";
-  c.o.forEach(function(t,k){
-    var b=document.createElement("button");b.textContent=t;
-    b.onclick=function(){
-      if(done)return;
-      if(k===c.a){b.className="ok";done=true;
-        document.getElementById("fb").textContent=(i<Q.length-1)?"آفرین! ✔ سؤال بعدی…":"آفرین! همه‌ی سؤال‌ها را تمام کردی 🎉";
-        setTimeout(function(){i=(i+1)%Q.length;show();},1200);
-      }else{b.className="no";document.getElementById("fb").textContent="دوباره امتحان کن";}
-    };
-    o.appendChild(b);
-  });
+const SYS="تو «یار پارسی»، معلم و دستیار مهربان درس پارسی پایه‌ی هشتم ایران هستی. فقط و فقط به پارسی سره و ساده (همیشه بگو «پارسی» و هرگز «فارسی» نگو)، برای دانش‌آموز ۱۴ ساله پاسخ بده. قانون سخت: هیچ واژه‌ی انگلیسی یا حرف لاتین در پاسخ نیاید (حتی داخل پرانتز). تا جایی که می‌شود به‌جای واژه‌ها و عبارت‌های عربی، برابر پارسی بگذار (برای نمونه «درود» به‌جای سلام، «پرسش» به‌جای سؤال، «پاسخ» به‌جای جواب، «همیشه» به‌جای دائماً، «سپاس» به‌جای تشکر) و جمله‌ها را عربی‌وار ننویس. فقط اگر برای یک اصطلاح درسی کتاب هیچ برابر پارسی نیست، همان را بیاور و با زبان ساده توضیحش بده. درباره‌ی دروس کتاب پارسی هشتم، دستور زبان، آرایه‌های ادبی، معنی واژه‌ها، شعر و نثر، نگارش و املا کمک کن و مثال بزن. اگر از درس یا شعر مشخصی مطمئن نیستی صادقانه بگو. اگر سؤال ربطی به پارسی و درس نداشت، مؤدبانه به موضوع درس برگردان. پاسخ‌ها کوتاه و مرتب باشند.";
+const SUG=["جمله‌ی ساده و مرکب چه فرقی دارند؟","استعاره و تشبیه را با مثال توضیح بده","چند تست از آرایه‌های ادبی بپرس","فرق «خواستن» و «خاستن» چیست؟"];
+const msgs=document.getElementById("msgs"),q=document.getElementById("q"),btn=document.getElementById("send"),chips=document.getElementById("chips");
+let hist=[],busy=false,sample=null;
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function fmt(s){return esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/^#+\s*/gm,"")}
+function add(cls,t){const d=document.createElement("div");d.className="m "+cls;if(cls==="me")d.textContent=t;else d.innerHTML=fmt(t);msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d}
+SUG.forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.onclick=()=>{q.value=s;go()};chips.appendChild(b)});
+(async()=>{try{sample=await claude.use("sample")}catch(e){sample=null}})();
+async function go(){
+const t=q.value.trim();if(!t||busy)return;
+q.value="";chips.style.display="none";add("me",t);
+const out=add("bot","…");
+if(!sample){out.textContent="برای پاسخ‌گویی، این صفحه را داخل Claude باز کن و دسترسی را تأیید کن.";return}
+busy=true;btn.disabled=true;
+hist.push({role:"user",content:t});
+const input=hist.slice(-10).map((m,i,a)=>i===0&&m.role==="user"?{role:"user",content:SYS+"\n\n"+m.content}:m);
+if(input[0].role!=="user"||!input[0].content.startsWith(SYS)){input[0]={role:"user",content:SYS+"\n\n"+input[0].content}}
+try{
+const r=await sample(input,{cache:false,onText:({text})=>{out.innerHTML=fmt(text);msgs.scrollTop=msgs.scrollHeight}});
+hist.push({role:"assistant",content:r.text});
+}catch(e){
+out.textContent=e&&e.code==="not_granted"?"برای استفاده از دستیار باید دسترسی را تأیید کنی.":"متأسفم، الان نتوانستم پاسخ بدهم. کمی بعد دوباره امتحان کن.";
+hist.pop();
 }
-show();
+busy=false;btn.disabled=false;q.focus();
+}
+btn.onclick=go;
+q.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();go()}});
 </script>
 </body>
 </html>
